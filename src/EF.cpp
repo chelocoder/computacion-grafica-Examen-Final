@@ -594,7 +594,15 @@ void display() {
 
     dibujarGrid();
 
+    if (modoWireframe) {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    } else {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+    }
+
     editor.dibujarEscena();
+
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
     dibujarIndicadorLuz();
 
