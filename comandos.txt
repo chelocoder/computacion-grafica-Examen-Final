@@ -1,0 +1,69 @@
+Compilar:
+
+cl /EHsc /MD /O2 src\EF.cpp src\Object3D.cpp src\SceneManager.cpp src\ObjLoader.cpp src\Scene.cpp src\camera.cpp src\curves.cpp src\Lighting.cpp src\Texture.cpp imgui\imgui.cpp imgui\imgui_draw.cpp imgui\imgui_tables.cpp imgui\imgui_widgets.cpp imgui\imgui_impl_glut.cpp imgui\imgui_impl_opengl2.cpp /D FREEGLUT_STATIC /D NDEBUG /I freeglut\include /I include /I imgui /link /LIBPATH:freeglut\lib freeglut_static.lib opengl32.lib glu32.lib winmm.lib /OUT:EF.exe
+
+
+Ejecutar:
+
+.\PA03.exe
+
+
+INTERACCIÓN CON EL TECLADO
+
+CÁMARA Y VISUALIZACIÓN
+← / → : Girar la cámara alrededor de la escena
+↑ / ↓ : Subir o bajar la altura de la cámara
+Z : Acercar la cámara
+X : Alejar la cámara
+P : Cambiar entre proyección perspectiva y ortográfica
+M : Cambiar entre modo sólido y wireframe
+
+
+CREACIÓN DE OBJETOS
+C : Crear cubo
+V : Crear esfera
+N : Crear cilindro
+F : Crear plano
+
+
+GESTIÓN DE OBJETOS
+TAB : Seleccionar el siguiente objeto
+G : Duplicar el objeto seleccionado
+K : Eliminar el objeto seleccionado
+DELETE : Eliminar el objeto seleccionado
+
+
+MOVIMIENTO DEL OBJETO SELECCIONADO
+H : Mover en X negativo
+L : Mover en X positivo
+Y : Mover en Y positivo
+U : Mover en Y negativo
+I : Mover en Z negativo
+O : Mover en Z positivo
+
+
+ROTACIÓN DEL OBJETO SELECCIONADO
+J : Rotar -5° sobre el eje Y
+; : Rotar +5° sobre el eje Y
+
+
+ESCALA DEL OBJETO SELECCIONADO
++ : Aumentar escala
+- : Reducir escala
+
+
+ILUMINACIÓN
+1 : Activar o desactivar la luz puntual
+2 : Activar o desactivar la luz direccional
+3 : Cambiar la intensidad de la luz principal
+4 : Disminuir la velocidad de la luz
+5 : Aumentar la velocidad de la luz
+6 : Fijar la luz puntual en 0°
+7 : Fijar la luz puntual en 90°
+8 : Fijar la luz puntual en 180°
+9 : Fijar la luz puntual en 270°
+R : Activar o pausar la animación de la luz
+
+
+OTROS
+ESC : Cerrar el programa
